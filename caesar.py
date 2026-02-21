@@ -1,31 +1,21 @@
-from caesar import caesar_cipher
+def caesar_cipher(s, k):
 
+    result = ""
 
-# lowercase
-def test_lowercase():
+    k = k % 26
 
-    assert caesar_cipher("abc",2) == "cde"
+    for char in s:
 
+        if char.islower():
 
-# wrap around
-def test_wrap():
+            result += chr((ord(char) - 97 + k) % 26 + 97)
 
-    assert caesar_cipher("xyz",3) == "abc"
+        elif char.isupper():
 
+            result += chr((ord(char) - 65 + k) % 26 + 65)
 
-# uppercase
-def test_uppercase():
+        else:
 
-    assert caesar_cipher("ABC",2) == "CDE"
+            result += char
 
-
-# special character
-def test_special():
-
-    assert caesar_cipher("hello!",5) == "mjqqt!"
-
-
-# mix case
-def test_mix():
-
-    assert caesar_cipher("AbC",1) == "BcD"
+    return result
