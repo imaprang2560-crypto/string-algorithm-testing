@@ -60,6 +60,12 @@ String Algorithm Testing ด้วย Python และ Pytest
 * ไม่มีข้อผิดพลาดในการทำงาน
 
 
+## Test Coverage Result
+
+![Test Coverage](images/test_result.png)
+
+
+
 ## โครงสร้างโปรเจค
 
 ```
@@ -104,7 +110,6 @@ Commit Early and Commit Often
 
 เพื่อให้สามารถติดตามการพัฒนาได้อย่างชัดเจน
 
----
 
 ## วิธีรันโปรแกรม
 
@@ -131,3 +136,10 @@ python -m pytest --cov
 * สามารถมั่นใจได้ว่าอัลกอริทึมไม่มีข้อผิดพลาด
 
 
+## การใช้ Git 
+
+โปรเจกต์นี้ใช้ Git ในการควบคุมเวอร์ชัน โดยใช้หลักการ
+
+Commit Early and Commit Often
+
+เพื่อบันทึกการพัฒนาโปรแกรมในแต่ละขั้นตอน
